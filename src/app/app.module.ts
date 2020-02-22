@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarBoxComponent } from './sidebar-box/sidebar-box.component';
 import { ContentLinkComponent } from './content-link/content-link.component';
+import { QuoteComponent } from './quote/quote.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ContentLinkComponent } from './content-link/content-link.component';
     FooterComponent,
     SidebarComponent,
     SidebarBoxComponent,
-    ContentLinkComponent
+    ContentLinkComponent,
+    QuoteComponent
   ],
   imports: [
     BrowserModule,
