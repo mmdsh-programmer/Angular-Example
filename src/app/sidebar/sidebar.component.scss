@@ -1,0 +1,48 @@
+/*---------------sidebar-pic-------------*/
+
+.side{
+    background-color: #fff;
+    height: 51%;
+    padding-top: 10px;
+}
+
+.side .sidebar-pic img{
+    width: 130px;
+    border-radius: 50%;
+}
+
+.side .sidebar-pic{
+    margin: 30px;
+}
+
+/*---------------sidebar-info-------------*/
+
+.side .sidebar-info{
+    text-align: center;
+    padding: 0 25px;
+}
+
+.side .sidebar-info p{
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.side .sidebar-info .btn{
+    width: 150px;
+    height: 45px;
+    padding-top: 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.side .sidebar-info .btn-warning{
+    background-color: #ff8a00 ;
+    color: white;
+    border-color: #ff8a00;
+}
+
+.side .sidebar-info .btn-warning:hover{
+    color: white !important;
+}
