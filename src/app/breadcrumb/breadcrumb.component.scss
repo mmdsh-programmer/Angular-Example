@@ -1,37 +1,33 @@
 /*---------------breadcrumb-------------*/
 
-.content .row{
-    margin-top: 90px;
-}
-
-.content .breadcrumb{
+.breadcrumb{
     background-color: #f5f5f5;
     padding: 0 1rem;
     height: 49px;
     align-items: center;
 }
 
-.content .breadcrumb-nav a{
+.breadcrumb-nav a{
     font-size: 14px;
     font-weight: 600;
 }
 
-.content .breadcrumb .prev{
+.breadcrumb .prev{
     color: #337ab7;
 }
 
-.content .breadcrumb .current{
+.breadcrumb .current{
     color: #5f5f5f;
     text-decoration: none;
     cursor: default;
 }
 
-.content .breadcrumb span{
+.breadcrumb span{
     color: rgb(204, 204, 204);
     margin: 0 5px;
 }
 
-.content .breadcrumb .breadcrumb-location{
+.breadcrumb .breadcrumb-location{
     background-color: white;
     position: absolute;
     left: 16px;
@@ -41,7 +37,7 @@
     border-radius: 0.25rem;
 }
 
-.content .breadcrumb .breadcrumb-location a{
+.breadcrumb .breadcrumb-location a{
     font-size: 14px;
     color: #ffb013;
     font-weight: 600;
