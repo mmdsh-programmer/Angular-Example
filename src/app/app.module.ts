@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SidebarBoxComponent } from './sidebar-box/sidebar-box.component';
 import { ContentLinkComponent } from './content-link/content-link.component';
 import { QuoteComponent } from './quote/quote.component';
+import { ContentDiscussComponent } from './content-discuss/content-discuss.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { QuoteComponent } from './quote/quote.component';
     SidebarComponent,
     SidebarBoxComponent,
     ContentLinkComponent,
-    QuoteComponent
+    QuoteComponent,
+    ContentDiscussComponent
   ],
   imports: [
     BrowserModule,
