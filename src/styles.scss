@@ -46,15 +46,6 @@ body{
     border-bottom: 1px solid #eeeeee;
 }
 
-.titles .titles-link{
-    margin-top: -70px;
-    padding-bottom: 15px;
-}
-
-.titles .titles-link .col-md-6{
-    padding: 8px 15px;
-}
-
 .titles .titles-link a{
     text-decoration: none;
     color: #337ab7;
@@ -66,11 +57,22 @@ body{
     color: #5a7391;
 }
 
-/*---------------qoutes-------------*/
+.titles-link{
+    margin-top: -70px;
+    padding-bottom: 15px;
+}
+
+.titles .titles-link .col-md-6{
+    padding: 8px 15px;
+}
+
+/*---------------titles-------------*/
 
 .titles-result{
     padding: 15px 0 0 0 !important;
 }
+
+/*---------------qoutes-------------*/
 
 .qoutes{
     background-color: #f9f9f9;
