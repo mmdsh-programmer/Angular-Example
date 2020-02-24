@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { SidebarBoxComponent } from './sidebar-box/sidebar-box.component';
+import { SidebarBoxComponent } from './sidebar/sidebar-box/sidebar-box.component';
 import { ContentLinkComponent } from './content-link/content-link.component';
 import { QuoteComponent } from './quote/quote.component';
 import { ContentDiscussComponent } from './content-discuss/content-discuss.component';
