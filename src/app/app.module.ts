@@ -11,6 +11,9 @@ import { SidebarBoxComponent } from './sidebar/sidebar-box/sidebar-box.component
 import { ContentLinkComponent } from './content-link/content-link.component';
 import { QuoteComponent } from './quote/quote.component';
 import { ContentDiscussComponent } from './content-discuss/content-discuss.component';
+import { PagesComponent } from './pages/pages/pages.component';
+import { NewsComponent } from './pages/news/news.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +25,9 @@ import { ContentDiscussComponent } from './content-discuss/content-discuss.compo
     SidebarBoxComponent,
     ContentLinkComponent,
     QuoteComponent,
-    ContentDiscussComponent
+    ContentDiscussComponent,
+    PagesComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
