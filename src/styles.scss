@@ -66,6 +66,13 @@ body{
     padding: 8px 15px;
 }
 
+.titles p{
+    line-height: 45px;
+    font-size: 14px;
+    color: #5f5f5f;
+    margin-top: 10px;
+}
+
 /*---------------sidebar-------------*/
 
 .col-lg-3{
@@ -87,3 +94,25 @@ body{
     border-radius: 0;
     color: white;
   }
+
+/*-------------------post----------------*/
+
+.post p{
+    line-height: 35px;
+    margin-top: 0;
+}
+
+.post a{
+    text-decoration: none;
+    color: #337ab7;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.post a:hover{
+    color: #5a7391;
+}
+
+.post strong{
+    color: #5f5f5f;
+}
