@@ -14,6 +14,7 @@ import { ContentDiscussComponent } from './content-discuss/content-discuss.compo
 import { PagesComponent } from './pages/pages/pages.component';
 import { NewsComponent } from './pages/news/news.component';
 import { MessageComponent } from './message/message.component';
+import { BrainComponent } from './pages/brain/brain.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MessageComponent } from './message/message.component';
     ContentDiscussComponent,
     PagesComponent,
     NewsComponent,
-    MessageComponent
+    MessageComponent,
+    BrainComponent
   ],
   imports: [
     BrowserModule,
