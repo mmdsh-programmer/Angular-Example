@@ -13,6 +13,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { ContentDiscussComponent } from './content-discuss/content-discuss.component';
 import { PagesComponent } from './pages/pages/pages.component';
 import { NewsComponent } from './pages/news/news.component';
+import { MessageComponent } from './message/message.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NewsComponent } from './pages/news/news.component';
     QuoteComponent,
     ContentDiscussComponent,
     PagesComponent,
-    NewsComponent
+    NewsComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

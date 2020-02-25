@@ -1,0 +1,15 @@
+.message{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: #f9a500;
+    color: white;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-top-right-radius: 5px;
+}
+
+.message i{
+    margin-left: 10px;
+    font-size: 15px;
+}
