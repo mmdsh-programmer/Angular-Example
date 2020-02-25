@@ -17,13 +17,12 @@
 }
 
 .main-header .navbar-links .nav-link{
-    padding-left: 0.9rem;
-}
-
-.main-header .navbar-links .nav-link{
     font-size: 14px;
     color: #9dacbc;
     font-weight: 600;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .main-header .navbar-links .nav-link:hover{
@@ -49,6 +48,7 @@
     font-size: 14px;
     font-weight: 600;
     padding-top: 8px;
+    margin-right: 10px;
 }
 
 .main-header .btn-warning{
@@ -65,7 +65,5 @@
     color: white !important;
     background-color: #3cafff ;
     height: 60px;
-    width: 65px;
-    margin-left: 15px;
     padding-top: 20px;
 }
