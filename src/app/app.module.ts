@@ -15,6 +15,7 @@ import { PagesComponent } from './pages/pages/pages.component';
 import { NewsComponent } from './pages/news/news.component';
 import { MessageComponent } from './message/message.component';
 import { BrainComponent } from './pages/brain/brain.component';
+import { ActivePartComponent } from './active-part/active-part.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { BrainComponent } from './pages/brain/brain.component';
     PagesComponent,
     NewsComponent,
     MessageComponent,
-    BrainComponent
+    BrainComponent,
+    ActivePartComponent
   ],
   imports: [
     BrowserModule,

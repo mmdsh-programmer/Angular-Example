@@ -1,0 +1,270 @@
+.titles{
+    padding: 15px 0 0 0;
+}
+
+.special{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row{
+    margin-top: 0;
+}
+
+.col-2{
+    padding-left: 0;
+}
+
+.titles-pic{
+    width: 95%;
+    margin-bottom: 25px;
+}
+
+.titles-features{
+    display: contents;
+}
+
+.titles-features li i{
+    margin-left: 15px;
+    color: #909090;
+    font-size: 20px;
+}
+
+.titles-features li span{
+    color: #909090;
+    font-size: 15px;
+}
+
+.titles-features li{
+    margin-bottom: 12px;
+}
+
+h3{
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.titles .question{
+    color: #909090;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.titles .titles-title{
+    margin-top: 15px;
+}
+
+.btn{
+    width: 200px;
+    height: 60px;
+    background-color: #ffb013;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 20px;
+    top: 23px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.btn:hover{
+    color: white !important;
+}
+
+.titles-aim{
+    margin-top: 70px;
+}
+
+.titles-aim .aim-question{
+    color: #5f5f5f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.aim-items{
+    color: #5f5f5f;
+    display: contents;
+    margin-top: 20px;
+}
+
+.aim-items .first{
+    margin-top: 20px;
+}
+
+.aim-items li{
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.aim-items i{
+    font-size: 25px;
+    margin-left: 15px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .titles-features li i{
+        display: block;
+        padding-right: 13px;
+    }
+
+    .titles-features li{
+        text-align: center;
+    }
+
+    .btn{
+        display: block;
+        width: 90%;
+        top: 76px;
+        height: 45px;
+        right: 10px;
+    }
+
+    .titles .titles-title{
+        margin-top: 0;
+    }
+}   
+
+@media only screen and (max-width: 767px) {
+    .aim-items li{
+        font-size: 12px;
+    }
+
+    .aim-items li i{
+        font-size: 15px;
+    }
+
+    .titles-features li i{
+        font-size: 15px;
+    }
+
+    .titles-features li span{
+        font-size: 12px;
+    }
+
+    .btn{
+        font-size: 15px;
+        padding-top: 10px;
+    }
+
+    h3{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 361px) {
+    .titles-features li i{
+        padding-right: 7px;
+    }
+}
+
+.titles-image{
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+}
+
+.titles-image img{
+    width: 100%;
+}
+
+.titles-image .image-social-icons{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    padding-top: 5px;
+}
+
+.titles-image .image-social-icons a{
+    color: #337ab7;
+    font-size: 2em;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+.titles-image .image-social-icons a:hover{
+    color: #1363a8;
+}
+
+.titles-share-bar{
+    width: 100%;
+    background-color: #f5f8fa;
+    border-top: 1px solid #ebebeb;
+}
+
+.titles-share-bar ul{
+    list-style-type: none;
+    display: contents;
+}
+
+.titles-share-bar ul li{
+    list-style-type: none;
+    display: inline;
+    float: right;
+    margin-right: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.titles-share-bar a{
+    text-decoration: none;
+    color: #14b9d6;
+}
+
+.titles-share-bar .first-icon:focus{
+    color: #f36a5a;
+}
+
+.titles-share-bar ul li i{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+
+.titles-share-bar ul li span{
+    font-size: 12px;
+}
+
+.users{
+    margin-top: 10px;
+}
+
+.users .user{
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    border-radius: 50%;
+    display: inline-block;
+    float: right;
+    margin-left: 9px;
+}
+
+.users .user img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.users-text{
+    color: #9dacbb;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    margin-top: 58px;
+    margin-right: -135px;
+    float: right;
+    margin-bottom: 8px;
+}
+
+.share{
+    font-size: 16px;
+    color: #f36a5a !important;
+}
+
+.share i{
+    font-size: 30px;
+    margin-left: 10px;
+}
