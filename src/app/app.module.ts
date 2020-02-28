@@ -16,6 +16,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { MessageComponent } from './message/message.component';
 import { BrainComponent } from './pages/brain/brain.component';
 import { ActivePartComponent } from './active-part/active-part.component';
+import { CommentsComponent } from './comments/comments.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ActivePartComponent } from './active-part/active-part.component';
     NewsComponent,
     MessageComponent,
     BrainComponent,
-    ActivePartComponent
+    ActivePartComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
