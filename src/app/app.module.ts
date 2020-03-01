@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,6 +17,7 @@ import { MessageComponent } from './message/message.component';
 import { BrainComponent } from './pages/brain/brain.component';
 import { ActivePartComponent } from './active-part/active-part.component';
 import { CommentsComponent } from './comments/comments.component';
+import { from } from 'rxjs';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { CommentsComponent } from './comments/comments.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
