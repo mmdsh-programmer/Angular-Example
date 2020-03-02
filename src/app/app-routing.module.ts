@@ -11,7 +11,7 @@ const routes: Routes = [
     component: PagesComponent
   },
   {
-    path: 'news',
+    path: 'news/:id/:slug',
     component: NewsComponent
   },
   {

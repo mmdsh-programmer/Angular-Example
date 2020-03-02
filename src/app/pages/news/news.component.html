@@ -1,5 +1,11 @@
-<div class="titles post">
-    <h3>تحلیلگران: شخصیت شهودی متفکر</h3>
+<div class="titles post" *ngIf="news">
+    
+    <h3>{{news.title}}</h3>
+    
+    <div innerHtml={{news.content}}>
+
+    </div>
+    <!--
 
     <p>در آغاز سال تحصیلی چقدر برای ورود به دانشگاه اضطراب دارید؟</p>
     <p class="text-justify">
@@ -80,3 +86,4 @@
 
     <p class="result">رفتن به دانشگاه برای اولین بار ، هم یک تجربه دشوار است هم هیجان انگیز. بدون توجه به نوع شخصیت شما</p>
 </div>
+-->

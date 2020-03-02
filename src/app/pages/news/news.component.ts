@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ContentService } from '../../services/content.service';
 
 @Component({
   selector: 'app-news',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  constructor() { }
-
+  constructor( private route: ActivatedRoute , private contentService: ContentService) {}
+  news: any;
   ngOnInit(): void {
+    this.route.paramMap.subscribe( (value) => {
+      if (Number(value.get('id')) > 0) {
+        this.contentService.getNews(value.get('id')).subscribe( (value2) => {
+          this.news = value2;
+          console.log(this.news);
+        });  
+      } 
+  });
   }
-
 }
