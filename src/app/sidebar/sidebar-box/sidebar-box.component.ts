@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from '../../services/content.service';
 
 @Component({
   selector: 'app-sidebar-box',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarBoxComponent implements OnInit {
 
-  constructor() { }
+  users: any;
+  constructor( private contentService: ContentService) { }
 
   ngOnInit(): void {
+    this.contentService.getFourteenDays(9, 0).subscribe((value) => {
+      this.users = value;
+      console.log(this.users);
+    });
   }
 
 }
