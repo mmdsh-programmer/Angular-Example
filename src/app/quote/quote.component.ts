@@ -13,7 +13,7 @@ export class QuoteComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.contentService.getFourteenDays().subscribe((value) => {
+    this.contentService.getFourteenDays(5, 0).subscribe((value) => {
       this.quote = value;
     });
   }
