@@ -27,8 +27,9 @@ export class ContentService {
     });
    }
 
-   getFourteenDays() {
-    return this.http.get(`${this.baseUrl}/challengeResults/text/module/fourteendays/external?order=id&type=desc&offset=0&limit=5` , {
+   getFourteenDays(limit: number , offset: number) {
+    return this.http.get(`${this.baseUrl}/challengeResults/text/module/fourteendays/external?order=id&type=desc&
+    offset=${offset}&limit=${limit}` , {
       headers : this.headers
     });
    }
