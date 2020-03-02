@@ -14,7 +14,6 @@ export class ContentLinkComponent implements OnInit {
   ngOnInit(): void {
     this.contentService.getCategories().subscribe((value) => {
       this.categories = value;
-      console.log(this.categories);
     });
   }
 
