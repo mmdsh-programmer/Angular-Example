@@ -26,4 +26,16 @@ export class ContentService {
       headers : this.headers
     });
    }
+
+   getFourteenDays() {
+    return this.http.get(`${this.baseUrl}/challengeResults/text/module/fourteendays/external?order=id&type=desc&offset=0&limit=5` , {
+      headers : this.headers
+    });
+   }
+
+   getShoutBoxes() {
+    return this.http.get(`${this.baseUrl}/shout-box/shorted` , {
+      headers : this.headers
+    });
+   }
 }
