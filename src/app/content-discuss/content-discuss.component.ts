@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from '../services/content.service'; 
 
 @Component({
   selector: 'app-content-discuss',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentDiscussComponent implements OnInit {
 
-  constructor() { }
+  shoutbox: any;
+  constructor( private contentService: ContentService) { }
 
   ngOnInit(): void {
+    this.contentService.getShoutBoxes().subscribe((value) => {
+      this.shoutbox = value;
+      console.log(this.shoutbox);
+
+    });
   }
 
 }
