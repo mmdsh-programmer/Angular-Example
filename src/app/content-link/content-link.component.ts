@@ -8,11 +8,13 @@ import { ContentService } from '../services/content.service';
 })
 export class ContentLinkComponent implements OnInit {
 
-  constructor( private ContentService : ContentService) { }
+  constructor( private contentService: ContentService) { }
 
+  categories: any;
   ngOnInit(): void {
-    this.ContentService.getCategories().subscribe((value) => {
-      console.log("server" , value);
+    this.contentService.getCategories().subscribe((value) => {
+      this.categories = value;
+      console.log(this.categories);
     });
   }
 

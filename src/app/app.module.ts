@@ -18,6 +18,7 @@ import { BrainComponent } from './pages/brain/brain.component';
 import { ActivePartComponent } from './active-part/active-part.component';
 import { CommentsComponent } from './comments/comments.component';
 import { from } from 'rxjs';
+import { ContentService } from './services/content.service';
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import { from } from 'rxjs';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ContentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

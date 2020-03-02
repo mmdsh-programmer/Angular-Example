@@ -16,8 +16,14 @@ export class ContentService {
    }
 
    getCategories() {
-     return this.http.get(`${this.baseUrl}/pages/all-actives/category` ,{
+     return this.http.get(`${this.baseUrl}/pages/all-actives/category` , {
        headers : this.headers
      });
+   }
+
+   getNews( id: string) {
+    return this.http.get(`${this.baseUrl}/pages/${id}` , {
+      headers : this.headers
+    });
    }
 }
