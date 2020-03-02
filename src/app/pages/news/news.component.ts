@@ -14,9 +14,8 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe( (value) => {
       if (Number(value.get('id')) > 0) {
-        this.contentService.getNews(value.get('id')).subscribe( (value2) => {
+        this.contentService.getFourteenDays().subscribe( (value2) => {
           this.news = value2;
-          console.log(this.news);
         });  
       } 
   });
