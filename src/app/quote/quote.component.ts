@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from '../services/content.service';
 
 @Component({
   selector: 'app-quote',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuoteComponent implements OnInit {
 
-  constructor() { }
+  quote: any;
+  constructor( private contentService: ContentService ) { }
 
   ngOnInit(): void {
+
+    this.contentService.getFourteenDays().subscribe((value) => {
+      this.quote = value;
+    });
   }
 
 }
