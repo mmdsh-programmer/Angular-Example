@@ -8,7 +8,7 @@
     <div class="box-content row" *ngIf="users">
         <div class="col-4" *ngFor="let item of users.data">
             <div class="user-pic">
-                <a href="#" data-toggle="tooltip" title="حسین اکبری 475"><img src="https://api.milogy.com/users/{{item.user_id}}/avatar" alt="user"></a>
+                <a href="#" data-toggle="tooltip" title="{{item.nickname}}{{item.point}}"><img src="https://api.milogy.com/users/{{item.id}}/avatar" alt="user"></a>
             </div>
         </div>
     </div>

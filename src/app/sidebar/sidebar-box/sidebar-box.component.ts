@@ -12,7 +12,7 @@ export class SidebarBoxComponent implements OnInit {
   constructor( private contentService: ContentService) { }
 
   ngOnInit(): void {
-    this.contentService.getFourteenDays(9, 0).subscribe((value) => {
+    this.contentService.getBirthdays(9, 0).subscribe((value) => {
       this.users = value;
       console.log(this.users);
     });
