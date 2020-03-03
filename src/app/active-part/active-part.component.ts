@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from '../services/content.service';
 
 @Component({
   selector: 'app-active-part',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivePartComponent implements OnInit {
 
-  constructor() { }
+  specificService: any;
+  registered: number;
+  uses: string[];
+  constructor(private contentService: ContentService) { }
 
   ngOnInit(): void {
+    this.contentService.getSpecificService().subscribe( (value) => {
+      this.specificService = value;
+      console.log(this.specificService);
+      this.registered = Math.floor(this.specificService.registered / 1000) * 1000;
+      const str = new String(this.specificService.uses);
+      this.uses = str.split('","');
+    });
   }
 
 }

@@ -1,21 +1,21 @@
 <div class="titles">
     <div class="special">
-        <div class="row">
+        <div class="row" *ngIf="specificService">
             <div class="col-2">
-                <img src="assets/images/brain-icon (1)" alt="avatar pic" class="titles-pic">
+                <img src="https://api.milogy.com/{{specificService.icon}}" alt="avatar pic" class="titles-pic">
 
                 <ul class="list-unstyled titles-features">
-                    <li><i class="fas fa-gem"></i><span>250</span></li>
-                    <li><i class="fas fa-shopping-cart"></i><span>0 تومان</span></li>
-                    <li><i class="fas fa-list"></i><span>25 سوال</span></li>
-                    <li><i class="fas fa-hourglass"></i><span>5 دقیقه</span></li>
-                    <li><i class="fas fa-user-friends"></i><span>+2000 نفر</span></li>
+                    <li><i class="fas fa-gem"></i><span>{{specificService.point}}</span></li>
+                    <li><i class="fas fa-shopping-cart"></i><span>{{specificService.price}} تومان</span></li>
+                    <li><i class="fas fa-list"></i><span>{{specificService.total}} سوال</span></li>
+                    <li><i class="fas fa-hourglass"></i><span>{{specificService.duration}} دقیقه</span></li>
+                    <li><i class="fas fa-user-friends"></i><span>+{{registered}} نفر</span></li>
                 </ul>
             </div>
             <div class="col-10">
                 <div class="titles-title">
-                    <h3>نیمکره فعال</h3>
-                    <span class="question">کدوم نیمکره مغزم فعال تره؟!</span>
+                    <h3>{{specificService.title}}</h3>
+                    <span class="question">{{specificService.slogan}}</span>
                 </div>
                 <a href="#" class="btn btn-warning">مشاهده نتایج</a>
 
@@ -23,9 +23,9 @@
                     <span class="aim-question">به چه دردی میخوره؟</span>
 
                     <ul class="list-unstyled aim-items">
-                        <li class="d-flex align-items-center first"><i class="fas fa-check-circle"></i><span>میفهمی که از کدوم نیمکره مغزت بیشتر استفاده می کنی</span></li>
-                        <li class="d-flex align-items-center"><i class="fas fa-check-circle"></i><span>با کارکردهای نیم کره چپ و راست مغز آشنا میشی</span></li>
-                        <li class="d-flex align-items-center"><i class="fas fa-check-circle"></i><span>راهکارهایی برای تقویت هر دو نیم کره یاد میگیری</span></li>
+                        <li class="d-flex align-items-center first" *ngFor="let item of uses"><i class="fas fa-check-circle"></i><span>{{item}}</span></li>
+                        <!--<li class="d-flex align-items-center"><i class="fas fa-check-circle"></i><span>با کارکردهای نیم کره چپ و راست مغز آشنا میشی</span></li>
+                        <li class="d-flex align-items-center"><i class="fas fa-check-circle"></i><span>راهکارهایی برای تقویت هر دو نیم کره یاد میگیری</span></li>-->
                     </ul>
                 </div>
             </div>
