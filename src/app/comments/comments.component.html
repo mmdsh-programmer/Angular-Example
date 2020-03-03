@@ -1,93 +1,81 @@
-<div class="titles comments">
+<div class="titles comments" *ngIf="comments">
     
     <h3>نظرات و دیدگاه ها</h3>
-
-    <div class="comment">
-        <div class="comment-pic">
-            <a href=""><img src="assets/images/avatar (12).png" alt=""></a>
+    <div *ngFor="let item of comments.data">
+        <div class="comment">
+            <div class="comment-pic">
+                <a href=""><img src="https://api.milogy.com/users/{{item.user_id}}/avatar" alt=""></a>
+            </div>
+    
+            <div class="comment-text">
+                
+                <div class="text-heading">
+                    <a href="">{{item.user_nickname}}</a>
+                </div>
+    
+                <div class="text-time">
+                    <time>16 روز پیش</time>
+                </div>
+                
+                <div class="text-body">
+                    <p>{{item.comment}}</p>
+                </div>
+    
+                <a href="#"><i class="fas fa-reply"></i></a>
+            </div>
         </div>
 
-        <div class="comment-text">
+        <div *ngIf="item.child.length != 0">
+            <div *ngFor="let level2 of item.child">
+               
+                <div class="comment level-2">
+                    <div class="comment-pic">
+                        <a href=""><img src="https://api.milogy.com/users/{{level2.user_id}}/avatar" alt=""></a>
+                    </div>
             
-            <div class="text-heading">
-                <a href="">yasamin</a>
-            </div>
-
-            <div class="text-time">
-                <time>16 روز پیش</time>
-            </div>
+                    <div class="comment-text">
+                        
+                        <div class="text-heading">
+                            <a href="">{{level2.user_nickname}}</a>
+                        </div>
             
-            <div class="text-body">
-                <p>ازمون خیلی خوبی بود</p>
-            </div>
-
-            <a href="#"><i class="fas fa-reply"></i></a>
-        </div>
-    </div>
-
-    <div class="comment">
-        <div class="comment-pic">
-            <a href=""><img src="assets/images/avatar (12).png" alt=""></a>
-        </div>
-
-        <div class="comment-text">
+                        <div class="text-time">
+                            <time>16 روز پیش</time>
+                        </div>
+                        
+                        <div class="text-body">
+                            <p>{{level2.comment}}</p>
+                        </div>
             
-            <div class="text-heading">
-                <a href="">yasamin</a>
-            </div>
+                        <a href="#"><i class="fas fa-reply"></i></a>
+                    </div>
+                </div>
 
-            <div class="text-time">
-                <time>16 روز پیش</time>
-            </div>
-            
-            <div class="text-body">
-                <p>ازمون خیلی خوبی بود</p>
-            </div>
-
-            <a href="#"><i class="fas fa-reply"></i></a>
-        </div>
-    </div>
-
-    <div class="comment level-2">
-        <div class="comment-pic">
-            <a href=""><img src="assets/images/avatar (12).png" alt=""></a>
-        </div>
-
-        <div class="comment-text">
-            
-            <div class="text-heading">
-                <a href="">yasamin</a>
-            </div>
-
-            <div class="text-time">
-                <time>16 روز پیش</time>
-            </div>
-            
-            <div class="text-body">
-                <p>ازمون خیلی خوبی بود</p>
-            </div>
-
-            <a href="#"><i class="fas fa-reply"></i></a>
-        </div>
-    </div>
-
-    <div class="comment level-3">
-        <div class="comment-pic">
-            <a href=""><img src="assets/images/avatar (12).png" alt=""></a>
-        </div>
-
-        <div class="comment-text">
-            
-            <div class="text-heading">
-                <a href="">yasamin</a>
-            </div>
-
-            <div class="text-time">
-                <time>16 روز پیش</time>
-            </div>
-            
-            <div class="text-body">
-                <p>ازمون خیلی خوبی بود</p>
+                <div *ngIf="level2.child.length != 0">
+                    <div *ngFor="let level3 of level2.child">
+                        
+                        <div class="comment level-3">
+                            <div class="comment-pic">
+                                <a href=""><img src="https://api.milogy.com/users/{{level3.user_id}}/avatar" alt=""></a>
+                            </div>
+                    
+                            <div class="comment-text">
+                                
+                                <div class="text-heading">
+                                    <a href="">{{level3.user_nickname}}</a>
+                                </div>
+                    
+                                <div class="text-time">
+                                    <time>16 روز پیش</time>
+                                </div>
+                                
+                                <div class="text-body">
+                                    <p>{{level3.comment}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
