@@ -52,4 +52,16 @@ export class ContentService {
       headers : this.headers
     });
    }
+
+   getSpecificService() {
+    return this.http.get(`${this.baseUrl}/services/module/brain` , {
+      headers : this.headers
+    });
+   }
+
+   getComments(limit: number) {
+    return this.http.get(`${this.baseUrl}/comments/modules/module/1?order=date&type=desc&limit=${limit}` , {
+      headers : this.headers
+    });
+   }
 }
