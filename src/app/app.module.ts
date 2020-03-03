@@ -19,6 +19,7 @@ import { ActivePartComponent } from './active-part/active-part.component';
 import { CommentsComponent } from './comments/comments.component';
 import { from } from 'rxjs';
 import { ContentService } from './services/content.service';
+import { SidebarBoxServicesComponent } from './sidebar/sidebar-box-services/sidebar-box-services.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ContentService } from './services/content.service';
     MessageComponent,
     BrainComponent,
     ActivePartComponent,
-    CommentsComponent
+    CommentsComponent,
+    SidebarBoxServicesComponent
   ],
   imports: [
     BrowserModule,

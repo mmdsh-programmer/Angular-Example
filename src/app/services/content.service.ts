@@ -10,7 +10,8 @@ export class ContentService {
   private headers = new HttpHeaders()
   .set('Content-Type' , 'application/json')
   .set('Application' , 'wKvWyMJV5ab85DMYKpOD')
-  .set('Accept' , 'application/json');
+  .set('Accept' , 'application/json')
+  .set('x-auth' , 'LJu7xOia2ciOdm82M8H26qIzgH9x5SIaRxZwvLoFTj26YCLD2yT3QZo4BpQhRxia');
 
   constructor( private http: HttpClient) {
    }
@@ -36,6 +37,18 @@ export class ContentService {
 
    getShoutBoxes() {
     return this.http.get(`${this.baseUrl}/shout-box/shorted` , {
+      headers : this.headers
+    });
+   }
+
+   getBirthdays(limit: number , offset: number) {
+    return this.http.get(`${this.baseUrl}/users/birthdays?limit=${limit}&offset=${offset}` , {
+      headers : this.headers
+    });
+   }
+
+   getServices(limit: number , offset: number) {
+    return this.http.get(`${this.baseUrl}/services?limit=${limit}&offset=${offset}` , {
       headers : this.headers
     });
    }
