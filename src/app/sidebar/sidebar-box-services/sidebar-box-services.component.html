@@ -1,0 +1,15 @@
+<div class="sidebar-box">
+        
+    <div class="box-title">
+        <img src="assets/images/movafaghiat.png" alt="success icon">
+        <h4>سرویس ها</h4>
+    </div>
+    
+    <div class="box-content row" *ngIf="service">
+        <div class="col-4" *ngFor="let item of service.data">
+            <div class="user-pic">
+                <a href="#" data-toggle="tooltip" title="{{item.title}}"><img src="https://api.milogy.com/{{item.icon}}" alt="user"></a>
+            </div>
+        </div>
+    </div>
+</div>
