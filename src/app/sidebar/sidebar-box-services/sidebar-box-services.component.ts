@@ -14,7 +14,6 @@ export class SidebarBoxServicesComponent implements OnInit {
   ngOnInit(): void {
     this.contentService.getServices(10, 0).subscribe((value) => {
       this.service = value;
-      console.log(this.service);
     });
   }
 

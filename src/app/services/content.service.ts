@@ -53,14 +53,14 @@ export class ContentService {
     });
    }
 
-   getSpecificService() {
-    return this.http.get(`${this.baseUrl}/services/module/brain` , {
+   getSpecificService(route: string) {
+    return this.http.get(`${this.baseUrl}/services/module/${route}` , {
       headers : this.headers
     });
    }
 
-   getComments(limit: number) {
-    return this.http.get(`${this.baseUrl}/comments/modules/module/1?order=date&type=desc&limit=${limit}` , {
+   getComments(limit: number , id: string) {
+    return this.http.get(`${this.baseUrl}/comments/modules/module/${id}?order=date&type=desc&limit=${limit}` , {
       headers : this.headers
     });
    }

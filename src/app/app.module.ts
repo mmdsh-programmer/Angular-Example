@@ -20,7 +20,8 @@ import { CommentsComponent } from './comments/comments.component';
 import { from } from 'rxjs';
 import { ContentService } from './services/content.service';
 import { SidebarBoxServicesComponent } from './sidebar/sidebar-box-services/sidebar-box-services.component';
-
+import { LoginComponent } from './pages/login/login.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -39,12 +40,14 @@ import { SidebarBoxServicesComponent } from './sidebar/sidebar-box-services/side
     BrainComponent,
     ActivePartComponent,
     CommentsComponent,
-    SidebarBoxServicesComponent
+    SidebarBoxServicesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ContentService],
   bootstrap: [AppComponent]

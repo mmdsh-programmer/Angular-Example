@@ -1,0 +1,75 @@
+<form action="" [formGroup]="infoForm" (ngSubmit) = "submitForm()">
+    <div formGroupName="address">
+        
+        <label>
+            text:
+            <input type="text" formControlName="text">
+        </label>
+
+        <div formGroupName="geo">
+
+            <label>
+                latitude:
+                <input type="text" formControlName="latitude">
+            </label>
+            <label>
+                longitude:
+                <input type="text" formControlName="longitude">
+            </label>
+
+        </div>
+    </div>
+
+    <div formGroupName="info">
+
+        <label>
+            firstname:
+            <input type="text" formControlName="firstName">
+
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+                <div *ngIf="name.errors.required">firstname required</div>
+                <div *ngIf="name.errors.minlength">Min : 3</div>
+            </div>
+        </label>
+        <label>
+            lastname:
+            <input type="text" formControlName="lastName">
+        </label>
+
+    </div>
+
+    <div formGroupName="contactInfo">
+
+        <label>
+            mobile:
+            <input type="text" formControlName="mobile">
+
+            <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)" class="alert alert-danger">
+
+                <div *ngIf="mobile.errors.required">mobile required</div>
+                <div *ngIf="mobile.errors.minlength">Min : 11</div>
+            </div>
+        </label>
+        <label>
+            phone:
+            <input type="text" formControlName="phone">
+        </label>
+
+        <div formGroupName="fax">
+
+            <label>
+                office:
+                <input type="text" formControlName="office">
+            </label>
+            <label>
+                headq:
+                <input type="text" formControlName="headq">
+            </label>
+
+        </div>
+
+    </div>
+
+    <button type="submit" [disabled]="!infoForm.valid">Send</button>
+</form>

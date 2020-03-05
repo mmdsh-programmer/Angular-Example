@@ -8,7 +8,7 @@
     <div class="box-content row" *ngIf="service">
         <div class="col-4" *ngFor="let item of service.data">
             <div class="user-pic">
-                <a href="#" data-toggle="tooltip" title="{{item.title}}"><img src="https://api.milogy.com/{{item.icon}}" alt="user"></a>
+                <a href="/{{item.route}}" data-toggle="tooltip" title="{{item.title}}"><img src="https://api.milogy.com/{{item.icon}}" alt="user"></a>
             </div>
         </div>
     </div>

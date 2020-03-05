@@ -14,7 +14,6 @@ export class SidebarBoxComponent implements OnInit {
   ngOnInit(): void {
     this.contentService.getBirthdays(9, 0).subscribe((value) => {
       this.users = value;
-      console.log(this.users);
     });
   }
 

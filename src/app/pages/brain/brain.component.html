@@ -1,13 +1,11 @@
-<div class="info">
+<div class="info" *ngIf="specificServices">
     <div class="info-pic">
         <img src="assets/images/prof_1.png" alt="prof pic">
     </div>
 
     <div class="titles">
         <p class="info-text">
-            از نظر علمی میشه رابطه هایی بین مهارت و توانمندی های مختلف و نیم‌کره‌های راست و چپ مغز 
-            برقرار کرد... البته باید بگم دقت و صحت این رابطه‌ها هنوز ابهاماتی
-             داره ولی این تست بخشی از توانایی های عمومی شما رو تشریح می کنه|
+            {{specificServices.dialog}}
         </p>
     </div>
 </div>
