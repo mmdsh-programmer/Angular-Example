@@ -16,13 +16,14 @@ const routes: Routes = [
     component: NewsComponent
   },
   {
-    path: ':route',
-    component: BrainComponent
-  },
-  {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: ':route',
+    component: BrainComponent
   }
+
 ];
 
 @NgModule({
