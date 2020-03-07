@@ -8,7 +8,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  infoForm = this.fb.group(
+  /*infoForm = this.fb.group(
   {
     address: this.fb.group({
       text: [''],
@@ -32,21 +32,27 @@ export class LoginComponent implements OnInit {
       })
     })
   }
-);
+);*/
+
+  loginForm = this.fb.group({
+    username: ['', [Validators.required , Validators.minLength(4) , Validators.maxLength(32)]],
+    password: ['', [Validators.required , Validators.minLength(6) , Validators.maxLength(64)]]
+  });
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
   }
 
   submitForm() {
-    console.log(this.infoForm.value);
+    console.log(this.loginForm.value);
   }
 
-  get name() {
-    return this.infoForm.get('info.firstName');
+  get username() {
+    return this.loginForm.get('username');
   }
 
-  get mobile() {
-    return this.infoForm.get('contactInfo.mobile');
+  get password() {
+    return this.loginForm.get('password');
   }
+
 }

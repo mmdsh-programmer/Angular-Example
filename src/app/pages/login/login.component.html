@@ -1,75 +1,35 @@
-<form action="" [formGroup]="infoForm" (ngSubmit) = "submitForm()">
-    <div formGroupName="address">
+<div class="titles">
+    <h3>ورود</h3>
+    
+    <form [formGroup]="loginForm" (ngSubmit) = "submitForm()" class="login">
+        <div class="form-group">
+            <label for="login-username" class="form-label" id="two" [ngClass]="{'active-invalid-label': username.invalid && (username.dirty || username.touched) , 'active-label': username.valid}">نام کاربری</label>
+            <input type="text" formControlName="username" class="form-control input" id="login-username" placeholder="نام کاربری یا ایمیل">
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="text-danger">
+                <div *ngIf="username.errors.required">وارد کردن این فیلد ضروری است</div>
+                <div *ngIf="username.errors.minlength">حداقل طول نام کاربری 4 کاراکتر است</div>
+                <div *ngIf="username.errors.mixlength">حداکثر طول نام کاربری 32 کاراکتر است</div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="login-password" class="form-label" [ngClass]="{'active-invalid-label': password.invalid && (password.dirty || password.touched) , 'active-label': password.valid}">رمز عبور</label>
+            <input type="password" formControlName="password" class="form-control input second" id="login-password">
+            <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+                <div *ngIf="password.errors.required">وارد کردن این فیلد ضروری است</div>
+                <div *ngIf="password.errors.minlength">حداقل طول رمز عبور 6 کاراکتر است</div>
+                <div *ngIf="password.errors.mixlength">حداکثر طول رمز عبور 64 کاراکتر است</div>
+            </div>
+        </div>
         
-        <label>
-            text:
-            <input type="text" formControlName="text">
-        </label>
-
-        <div formGroupName="geo">
-
-            <label>
-                latitude:
-                <input type="text" formControlName="latitude">
-            </label>
-            <label>
-                longitude:
-                <input type="text" formControlName="longitude">
-            </label>
-
-        </div>
-    </div>
-
-    <div formGroupName="info">
-
-        <label>
-            firstname:
-            <input type="text" formControlName="firstName">
-
-            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-
-                <div *ngIf="name.errors.required">firstname required</div>
-                <div *ngIf="name.errors.minlength">Min : 3</div>
-            </div>
-        </label>
-        <label>
-            lastname:
-            <input type="text" formControlName="lastName">
-        </label>
-
-    </div>
-
-    <div formGroupName="contactInfo">
-
-        <label>
-            mobile:
-            <input type="text" formControlName="mobile">
-
-            <div *ngIf="mobile.invalid && (mobile.dirty || mobile.touched)" class="alert alert-danger">
-
-                <div *ngIf="mobile.errors.required">mobile required</div>
-                <div *ngIf="mobile.errors.minlength">Min : 11</div>
-            </div>
-        </label>
-        <label>
-            phone:
-            <input type="text" formControlName="phone">
-        </label>
-
-        <div formGroupName="fax">
-
-            <label>
-                office:
-                <input type="text" formControlName="office">
-            </label>
-            <label>
-                headq:
-                <input type="text" formControlName="headq">
-            </label>
-
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">مرا به خاطر بسپار</label>
         </div>
 
-    </div>
+        <a href="#" class="d-block">کلمه عبورم را فراموش کرده ام</a>
 
-    <button type="submit" [disabled]="!infoForm.valid">Send</button>
-</form>
+        <button type="submit" [disabled]="!loginForm.valid" class="btn btn-warning">ورود</button>
+        <button type="button" [disabled]="!loginForm.valid" class="btn btn-danger">ورود از طریق گوگل</button>
+    </form>
+</div>
