@@ -15,6 +15,7 @@ export class QuoteComponent implements OnInit {
 
     this.contentService.getFourteenDays(5, 0).subscribe((value) => {
       this.quote = value;
+      console.log(this.quote.data[0].date);
     });
   }
 
