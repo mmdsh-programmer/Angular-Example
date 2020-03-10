@@ -22,6 +22,7 @@ import { ContentService } from './services/content.service';
 import { SidebarBoxServicesComponent } from './sidebar/sidebar-box-services/sidebar-box-services.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WeeklyComponent } from './pages/weekly/weekly.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ActivePartComponent,
     CommentsComponent,
     SidebarBoxServicesComponent,
-    LoginComponent
+    LoginComponent,
+    WeeklyComponent
   ],
   imports: [
     BrowserModule,
