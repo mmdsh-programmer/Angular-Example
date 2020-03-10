@@ -64,4 +64,10 @@ export class ContentService {
       headers : this.headers
     });
    }
+
+   getSpecificShoutboxe(id: string , limit: number  , offset: number) {
+    return this.http.get(`${this.baseUrl}/shout-box/${id}/guest?limit=${limit}&offset=${offset}` , {
+      headers : this.headers
+    });
+   }
 }

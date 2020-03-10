@@ -1,1 +1,47 @@
-<p>weekly works!</p>
+<div class="titles" *ngIf="shoutboxe">
+    <h3>{{shoutboxe.shoutBox.title}}</h3>
+    
+    <div class="player pt-2">
+        <audio controls>
+            <source src="https://api.milogy.com/{{audio}}" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="text">
+        <p class="text-justify paragraph">
+            {{shoutboxe.shoutBox.text}}
+        </p>
+    </div>
+</div>
+
+<div class="titles" *ngIf="shoutboxe.data">
+    <h3>نظرات کابران میلوژی</h3>
+    <div class="titles" *ngFor="let item of shoutboxe.data" id="#{{item.id}}">
+        <div class="comments">
+            <div class="comment">
+                <div class="comment-pic">
+                    <a href="/users/profile/{{item.user_id}}"><img src="https://api.milogy.com/users/{{item.user_id}}/avatar" alt="user image"></a>
+                </div>
+        
+                <div class="comment-text">
+                    
+                    <div class="text-heading">
+                        <a href="/users/profile/{{item.user_id}}">{{item.nickname}}</a>
+                    </div>
+        
+                    <div class="text-time">
+                        <time>16 روز پیش</time>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment-reply" *ngIf="item.parent_slogan">
+                <a href="/weekly/{{item.shoutbox_id}}/{{item.parent}}#{{shoutboxe.shoutBox.title}}" ><p>در جواب به {{item.parent_nickname}} : {{item.parent_slogan}}...</p></a>
+            </div>
+            
+            <div class="comment-main-text">
+                <p class="text-justify">{{item.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>
