@@ -3,14 +3,14 @@
     <h3>نظرات و دیدگاه ها</h3>
     <div *ngFor="let item of comments.data">
         <div class="comment">
-            <div class="comment-pic">
-                <a href=""><img src="https://api.milogy.com/users/{{item.user_id}}/avatar" alt=""></a>
+            <div class="comment-pic" *ngIf="item.user_nickname != 'MilogySupportTeam'">
+                <a href="/users/profile/{{item.user_id}}"><img src="https://api.milogy.com/users/{{item.user_id}}/avatar" alt=""></a>
             </div>
     
             <div class="comment-text">
                 
                 <div class="text-heading">
-                    <a href="">{{item.user_nickname == 'MilogySupportTeam' ? 'تیم میلوژی' : item.user_nickname}}</a>
+                    <a href="/users/profile/{{item.user_id}}">{{item.user_nickname == 'MilogySupportTeam' ? 'تیم میلوژی' : item.user_nickname}}</a>
                 </div>
     
                 <div class="text-time">
