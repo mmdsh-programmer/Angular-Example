@@ -4,7 +4,7 @@
     <div class="row" *ngIf="shoutbox">
         <div class="titles-link titles-link-discuss">
             <div *ngFor="let item of shoutbox.data">
-                <a href="#">بحث هفته {{item.id}} : {{item.title}}</a>
+                <a href="weekly/{{item.id}}/{{item.title}}">بحث هفته {{item.id}} : {{item.title}}</a>
                 <p class="text-justify">{{item.text | slice:0:260}}...</p>
             </div>
         </div>

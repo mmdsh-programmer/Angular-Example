@@ -15,7 +15,6 @@ export class ContentDiscussComponent implements OnInit {
     this.contentService.getShoutBoxes().subscribe((value) => {
       this.shoutbox = value;
       console.log(this.shoutbox);
-
     });
   }
 
