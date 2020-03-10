@@ -5,11 +5,11 @@
         <div class="qoutes" *ngFor="let item of quote.data" >
             <div class="qoute-info">
                 <div class="qoute-info-pic">
-                    <a href=""><img src="https://api.milogy.com/users/{{item.user_id}}/avatar" alt="user pic"></a>
+                    <a href="/users/profile/{{item.user_id}}"><img src="https://api.milogy.com/users/{{item.user_id}}/avatar" alt="user pic"></a>
                 </div>
             
                 <div class="qoute-info-title align-items-center">
-                    <a href=""><h4>{{item.user_nickname}}</h4></a>
+                    <a href="/users/profile/{{item.user_id}}"><h4>{{item.user_nickname}}</h4></a>
                     <i class="fa fa-book"></i>
                     <span>{{item.title}}</span>
                 </div>
